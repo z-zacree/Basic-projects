@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="imports/bootstrap.min.css" />
+        <link rel="stylesheet" href="style.css" />
+        <script defer src="imports/jquery-3.6.0.js"></script>
+        <script defer src="imports/bootstrap.bundle.min.js"></script>
+        <script defer src="app.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-dark bg-dark">
+                <a class="navbar-brand" href="">App name</a>
+                <form class="form-inline">
+                    <button class="btn btn-outline-danger dis-none" type="button" id="signOutBtn">Sign out</button>
+                </form>
+            </nav>
+        </header>
+        <main>
+            <div class="container mt-4 dis-none" id="loginPage">
+                <div class="row">
+                    <div class="col-lg d-flex flex-column">
+                        <h1>App name</h1>
+                        <p>Log in or sign up now to ...</p>
+                    </div>
+                    <div class="col-lg">
+                        <div class="card">
+                            <div class="card-header">Log in</div>
+                            <div class="card-body">
+                                <form id="loginForm">
+                                    <div class="form-group mt-2">
+                                        <input type="text" class="form-control" name="username" placeholder="Username" aria-describedby="Username" />
+                                        <small class="form-text text-muted ml-2">Enter your username</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <input
+                                            type="password"
+                                            class="form-control"
+                                            name="password"
+                                            placeholder="Password"
+                                            aria-describedby="Password"
+                                        />
+                                        <small class="form-text text-muted ml-2">Enter your password</small>
+                                    </div>
+                                    <div class="alert alert-warning dis-none" role="alert" id="loginWarn">Username or password is invalid</div>
+                                    <button type="submit" class="btn btn-primary w-100 mt-2">Log in</button>
+                                </form>
+                                <hr />
+                                <button type="button" class="btn btn-success w-100" data-toggle="modal" data-target="#signUpModal">Sign up</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="mainPage" class="container mt-4 dis-none">
+                <div class="row">
+                    <div class="col-lg"></div>
+                    <div class="col-lg"></div>
+                </div>
+            </div>
+        </main>
+        <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Sign Up</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="signUpForm">
+                            <div class="form-group mt-2">
+                                <input type="text" class="form-control" name="username" placeholder="Username" aria-describedby="Username" />
+                                <small class="form-text text-muted ml-2">Enter a username</small>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" name="password" placeholder="Password" aria-describedby="Password" />
+                                <small class="form-text text-muted ml-2">Give your account a password</small>
+                            </div>
+                            <div class="alert alert-warning dis-none" role="alert" id="signUpWarn">Username has been taken</div>
+                            <button type="submit" class="btn btn-success w-100">Log in</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

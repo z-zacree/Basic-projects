@@ -1,0 +1,13 @@
+.dis-none {
+    display: none;
+}
+
+.card {
+    width: 400px;
+}
+
+@media (max-width: 991.33px) {
+    .card {
+        width: 100%;
+    }
+}
